@@ -1,13 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
 
-export default function Menu({
-  links,
-  toggleMenu,
-  setToggleMenu,
-  setToggleOverlay,
-}) {
+export default function Menu({ toggleMenu, setToggleMenu, setToggleOverlay }) {
   const menuRef = useRef();
 
   useEffect(() => {
@@ -22,12 +16,20 @@ export default function Menu({
     return () => window.removeEventListener('click', handleCLick);
   }, [toggleMenu]);
 
-  return links.map(
-    (link) =>
-      link && (
-        <Link href={`/${link.toLowerCase()}`} key={uuidv4()}>
-          <a ref={menuRef}>{link}</a>
-        </Link>
-      )
+  return (
+    <>
+      <Link href="/">
+        <a ref={menuRef}>Home</a>
+      </Link>
+      <Link href="/about">
+        <a ref={menuRef}>Our Team</a>
+      </Link>
+      <Link href="/brands">
+        <a ref={menuRef}>Our Brands</a>
+      </Link>
+      <Link href="/contact">
+        <a ref={menuRef}>Contact Us</a>
+      </Link>
+    </>
   );
 }

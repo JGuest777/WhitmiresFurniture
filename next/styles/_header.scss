@@ -1,18 +1,33 @@
 .header {
-  background-color: black;
-  padding-top: 1rem;
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    position: relative;
-    padding: 0 2rem 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c4c4c4;
+  height: 7.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 
+  &__logo {
     img {
-      transition: all 200ms ease-in-out;
-      &:hover {
-        transform: scale(1.01);
+      max-width: 150px;
+    }
+  }
+
+  &__links {
+    a {
+      color: #000;
+      font-size: $font-lg;
+      font-weight: 400;
+      transition: all 100ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 4rem;
       }
+
+      &:hover {
+        cursor: pointer;
+      }
+
       &:active {
         transform: scale(0.99);
       }
@@ -25,10 +40,9 @@
     background-color: transparent;
 
     > div {
-      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
-      border: 1.5px solid #fff;
+      border: 1.5px solid #000;
       width: 32px;
-      background-color: #fff;
+      background-color: #000;
       transition: all 200ms ease-in-out;
       transform-origin: 2px 2px;
 
@@ -84,30 +98,6 @@
         font-size: 28px;
         text-shadow: 4px 8px 8px rgba(0, 0, 0, 0.5);
         background-color: lighten(#0b44598e, $amount: 10%);
-      }
-    }
-  }
-
-  &__nav {
-    a {
-      display: inline-block;
-      color: #fff;
-      font-size: 24px;
-      text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.7);
-      transition: all 100ms ease-in-out;
-
-      &:not(:last-child) {
-        margin-right: 4rem;
-      }
-
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.02);
-        text-shadow: 4px 8px 8px rgba(0, 0, 0, 0.5);
-      }
-
-      &:active {
-        transform: scale(0.99);
       }
     }
   }

@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { useTransition, animated } from 'react-spring';
-import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
 import SubMenu from './SubMenu';
 import Menu from './Menu';
 
 export default function Header({ toggleOverlay, setToggleOverlay }) {
-  const links = ['Home', 'Our Team', 'Our Brands', 'Contact Us'];
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const transitions = useTransition(toggleMenu, null, {
@@ -23,14 +21,16 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
 
   return (
     <header className="header">
-      <nav>
+      <div className="header__logo">
         <Link href="/">
-          <a className="header__logo">
-            {/* <img src={require('../public/images/logo-white_sm.png')} /> */}
+          <a>
+            <img src={require('../public/images/logo.png?webp')} />
           </a>
         </Link>
+      </div>
+      <nav>
+        {/* Mobile Icons & Burger Menu */}
         <SubMenu />
-        {/* Mobile Burger Menu */}
         <button
           onClick={handleToggleMenu}
           className={`header__burger ${toggleMenu && 'open'} hide-desktop`}
@@ -41,21 +41,26 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
         </button>
 
         {/* Desktop Links */}
-        <div className="header__nav hide-mobile">
-          {links.map((link) => (
-            <Link href={`/${link.toLowerCase()}`} key={uuidv4()}>
-              <a>{link}</a>
-            </Link>
-          ))}
+        <div className="header__links hide-mobile">
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+          <Link href="/about">
+            <a>Our Team</a>
+          </Link>
+          <Link href="/brands">
+            <a>Our Brands</a>
+          </Link>
+          <Link href="/contact">
+            <a>Contact Us</a>
+          </Link>
         </div>
       </nav>
-
       {transitions.map(
         ({ item, key, props }) =>
           item && (
             <animated.div key={key} style={props} className="header__menu">
               <Menu
-                links={links}
                 toggleMenu={toggleMenu}
                 setToggleMenu={setToggleMenu}
                 setToggleOverlay={setToggleOverlay}

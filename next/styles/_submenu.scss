@@ -3,7 +3,8 @@
   top: 0;
   right: 0;
   display: flex;
-  margin-right: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 5rem;
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.7);
 
   &__mobile {
@@ -27,7 +28,7 @@
   }
 
   &__icons {
-    color: #fff;
+    color: #000;
     font-size: $font-sm;
     transition: all 200ms ease-in-out;
   }

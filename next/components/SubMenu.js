@@ -12,11 +12,6 @@ export default function SubMenu() {
           <FontAwesomeIcon className="submenu__icons" icon="envelope" />
         </a>
       </div>
-      {/* Desktop */}
-      <a href="tel:+13214272948" className="submenu__desktop hide-mobile">
-        <FontAwesomeIcon className="submenu__icons" icon="phone" /> (321)
-        427-2948
-      </a>
     </div>
   );
 }
