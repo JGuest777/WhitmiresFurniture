@@ -1,0 +1,25 @@
+.social {
+  text-align: center;
+  background-color: #e5e5e5;
+  height: 45vh;
+  padding: 1rem 2rem;
+
+  h1 {
+    font-family: $secondaryFont;
+    font-size: 85px;
+  }
+
+  h3 {
+    font-family: $altFont;
+    font-size: $font-lg;
+  }
+
+  img {
+    width: 285px;
+    height: 285px;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
