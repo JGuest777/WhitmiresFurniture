@@ -30,7 +30,7 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
       </div>
       <nav>
         {/* Mobile Icons & Burger Menu */}
-        <SubMenu />
+        {/* <SubMenu /> */}
         <button
           onClick={handleToggleMenu}
           className={`header__burger ${toggleMenu && 'open'} hide-desktop`}
