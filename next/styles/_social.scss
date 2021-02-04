@@ -19,9 +19,11 @@
 		font-size: $font-lg;
 	}
 
-	img {
-		width: 17.8rem;
-		height: 17.8rem;
-		margin: 1rem;
+	&__grid {
+		img {
+			width: 17.8rem;
+			height: 17.8rem;
+			padding: 1rem;
+		}
 	}
 }
