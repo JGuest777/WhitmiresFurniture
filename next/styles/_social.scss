@@ -2,10 +2,11 @@
 	text-align: center;
 	background-color: #e5e5e5;
 	padding: 1rem 2rem;
+	min-height: 50vh;
 
 	h1 {
 		font-family: $secondaryFont;
-		font-size: 85px;
+		font-size: 4.8125rem;
 	}
 
 	h3 {
@@ -14,11 +15,8 @@
 	}
 
 	img {
-		width: 285px;
-		height: 285px;
-
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
+		width: 17.8rem;
+		height: 17.8rem;
+		margin: 0.5rem;
 	}
 }
