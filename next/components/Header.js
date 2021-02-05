@@ -5,6 +5,25 @@ import Link from 'next/link'
 import Menu from './Menu'
 
 export default function Header({ toggleOverlay, setToggleOverlay }) {
+	const links = [
+		{
+			slug: '',
+			name: 'Home'
+		},
+		{
+			slug: 'about',
+			name: 'Our Team'
+		},
+		{
+			slug: 'brands',
+			name: 'Our Brands'
+		},
+		{
+			slug: 'contact',
+			name: 'Contact Us'
+		}
+	]
+
 	const [toggleMenu, setToggleMenu] = useState(false)
 
 	const transitions = useTransition(toggleMenu, null, {
@@ -42,18 +61,11 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
 
 				{/* Desktop Links */}
 				<div className='header__links hide-mobile'>
-					<Link href='/'>
-						<a>Home</a>
-					</Link>
-					<Link href='/about'>
-						<a>Our Team</a>
-					</Link>
-					<Link href='/brands'>
-						<a>Our Brands</a>
-					</Link>
-					<Link href='/contact'>
-						<a>Contact Us</a>
-					</Link>
+					{links.map((link) => (
+						<Link href={`/${link.slug}`}>
+							<a>{link.name}</a>
+						</Link>
+					))}
 				</div>
 			</nav>
 			{transitions.map(
@@ -61,6 +73,7 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
 					item && (
 						<animated.div key={key} style={props} className='header__menu'>
 							<Menu
+								links={links}
 								toggleMenu={toggleMenu}
 								setToggleMenu={setToggleMenu}
 								setToggleOverlay={setToggleOverlay}

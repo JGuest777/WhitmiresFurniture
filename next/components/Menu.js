@@ -1,43 +1,43 @@
-import { useEffect, useRef } from 'react'
+import { createRef, useEffect, useRef } from 'react'
 import Link from 'next/link'
 
-// TODO: Very hacky ref solution, refactor!
-// Track multiple refs (links) during click event
+export default function Menu({
+	links,
+	toggleMenu,
+	setToggleMenu,
+	setToggleOverlay
+}) {
+	let linkRefs = useRef([])
 
-export default function Menu({ toggleMenu, setToggleMenu, setToggleOverlay }) {
-	const linkRef = useRef()
-	const menuRef = useRef()
+	// creates refs foreach menu link
+	linkRefs.current = [0, 0, 0, 0].map(
+		(ref, index) => (linkRefs.current[index] = createRef())
+	)
 
 	useEffect(() => {
 		if (!toggleMenu) return
 		function handleCLick(e) {
-			if (
-				(menuRef.current && !menuRef.current.contains(e.target)) ||
-				linkRef.current.contains(e.target) ||
-				!linkRef.current.contains(e.target)
-			) {
-				setToggleMenu(false)
-				setToggleOverlay(false)
+			for (let i = 0; i < linkRefs.current.length; i++) {
+				const elRef = linkRefs.current[i]
+
+				if (elRef && !elRef.current.contains(e.target)) {
+					setToggleMenu(false)
+					setToggleOverlay(false)
+				}
 			}
 		}
+
 		window.addEventListener('click', handleCLick)
 		return () => window.removeEventListener('click', handleCLick)
 	}, [toggleMenu])
 
 	return (
-		<div ref={menuRef}>
-			<Link href='/'>
-				<a ref={linkRef}>Home</a>
-			</Link>
-			<Link href='/about'>
-				<a ref={linkRef}>Our Team</a>
-			</Link>
-			<Link href='/brands'>
-				<a ref={linkRef}>Our Brands</a>
-			</Link>
-			<Link href='/contact'>
-				<a ref={linkRef}>Contact Us</a>
-			</Link>
+		<div>
+			{links.map((link, i) => (
+				<Link href={`/${link.slug}`} key={i}>
+					<a ref={linkRefs.current[i]}>{link.name}</a>
+				</Link>
+			))}
 		</div>
 	)
 }
