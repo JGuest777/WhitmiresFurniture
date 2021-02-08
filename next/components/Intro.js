@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Intro() {
 	return (
-		<div className='intro'>
+		<div className='banner'>
 			<h1>We are Whitmire's Furniture</h1>
 			<h4>A family tradition since 1947</h4>
 			<p>

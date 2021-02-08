@@ -35,10 +35,6 @@
 	}
 
 	&__burger {
-		cursor: pointer;
-		border: none;
-		background-color: transparent;
-
 		> div {
 			border: 1.5px solid #000;
 			width: 32px;
@@ -60,14 +56,6 @@
 			> div:last-child {
 				transform: rotate(-45deg);
 			}
-		}
-
-		&:hover > div {
-			cursor: pointer;
-		}
-
-		&:focus {
-			outline: 0px;
 		}
 	}
 

@@ -1,3 +1,3 @@
 export default function BannerImg() {
-	return <div className='banner'></div>
+	return <div className='bannerImg'></div>
 }

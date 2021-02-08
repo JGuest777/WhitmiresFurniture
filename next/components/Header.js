@@ -43,26 +43,26 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
 			<div className='header__logo'>
 				<Link href='/'>
 					<a>
-						<img src={require('../public/images/logo.png?webp')} />
+						<img src='http://whitmiresfurniture.com/wp-content/uploads/2019/03/logo_peque%C3%B1o.png' />
 					</a>
 				</Link>
 			</div>
 			<nav>
 				{/* Mobile Icons & Burger Menu */}
 				{/* <SubMenu /> */}
-				<button
+				<a
 					onClick={handleToggleMenu}
 					className={`header__burger ${toggleMenu && 'open'} hide-desktop`}
 				>
 					<div />
 					<div />
 					<div />
-				</button>
+				</a>
 
 				{/* Desktop Links */}
 				<div className='header__links hide-mobile'>
-					{links.map((link) => (
-						<Link href={`/${link.slug}`}>
+					{links.map((link, i) => (
+						<Link href={`/${link.slug}`} key={i}>
 							<a>{link.name}</a>
 						</Link>
 					))}

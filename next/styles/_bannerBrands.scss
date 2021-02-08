@@ -1,0 +1,14 @@
+.banner {
+	text-align: center;
+	background-color: #e5e5e5;
+	min-height: 50vh;
+	padding: 2rem;
+
+	&__grid {
+		img {
+			width: 17.8rem;
+			height: 17.8rem;
+			padding: 1rem;
+		}
+	}
+}
