@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTransition, animated } from 'react-spring'
+import { v4 as uuidv4 } from 'uuid'
 import Link from 'next/link'
-// import SubMenu from './SubMenu';
 import Menu from './Menu'
 
 export default function Header({ toggleOverlay, setToggleOverlay }) {
@@ -49,7 +49,6 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
 			</div>
 			<nav>
 				{/* Mobile Icons & Burger Menu */}
-				{/* <SubMenu /> */}
 				<a
 					onClick={handleToggleMenu}
 					className={`header__burger ${toggleMenu && 'open'} hide-desktop`}
@@ -61,9 +60,9 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
 
 				{/* Desktop Links */}
 				<div className='header__links hide-mobile'>
-					{links.map((link, i) => (
-						<Link href={`/${link.slug}`} key={i}>
-							<a>{link.name}</a>
+					{links.map((link) => (
+						<Link href={`/${link.slug}`} key={uuidv4()}>
+							<a key={uuidv4()}>{link.name}</a>
 						</Link>
 					))}
 				</div>

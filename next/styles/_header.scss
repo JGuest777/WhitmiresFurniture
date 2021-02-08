@@ -57,6 +57,9 @@
 				transform: rotate(-45deg);
 			}
 		}
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	&__menu {

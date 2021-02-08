@@ -1,4 +1,5 @@
 import { createRef, useEffect, useRef } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import Link from 'next/link'
 
 export default function Menu({
@@ -34,8 +35,10 @@ export default function Menu({
 	return (
 		<div>
 			{links.map((link, i) => (
-				<Link href={`/${link.slug}`} key={i}>
-					<a ref={linkRefs.current[i]}>{link.name}</a>
+				<Link href={`/${link.slug}`} key={uuidv4()}>
+					<a ref={linkRefs.current[i]} key={uuidv4()}>
+						{link.name}
+					</a>
 				</Link>
 			))}
 		</div>
