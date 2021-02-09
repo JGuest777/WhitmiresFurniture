@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const url = `http://localhost:3000/api/getposts`
+const url = `https://whitmires-furniture.vercel.app/api/getposts`
 
 export default function useInstagram() {
 	const [posts, setPosts] = useState([])
