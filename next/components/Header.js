@@ -62,7 +62,7 @@ export default function Header({ toggleOverlay, setToggleOverlay }) {
 				<div className='header__links hide-mobile'>
 					{links.map((link) => (
 						<Link href={`/${link.slug}`} key={uuidv4()}>
-							<a key={uuidv4()}>{link.name}</a>
+							<a>{link.name}</a>
 						</Link>
 					))}
 				</div>

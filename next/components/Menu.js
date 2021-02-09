@@ -36,9 +36,7 @@ export default function Menu({
 		<div>
 			{links.map((link, i) => (
 				<Link href={`/${link.slug}`} key={uuidv4()}>
-					<a ref={linkRefs.current[i]} key={uuidv4()}>
-						{link.name}
-					</a>
+					<a ref={linkRefs.current[i]}>{link.name}</a>
 				</Link>
 			))}
 		</div>

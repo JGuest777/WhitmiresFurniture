@@ -22,3 +22,12 @@ export default function Home() {
 		</div>
 	)
 }
+
+// export async function getStaticProps(ctx) {
+
+// 	return {
+// 		props: {
+// 			posts
+// 		}
+// 	}
+// }
