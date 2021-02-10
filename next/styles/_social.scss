@@ -19,6 +19,13 @@
 		font-size: $font-lg;
 	}
 
+	&__link {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 	&__grid {
 		img {
 			width: 17.8rem;

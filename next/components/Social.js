@@ -1,4 +1,5 @@
 import useInstagram from '../hooks/useInstagram'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Social({ apiUrl }) {
 	const gramz = useInstagram({ apiUrl })
@@ -6,8 +7,17 @@ export default function Social({ apiUrl }) {
 	return (
 		<div className='social'>
 			<h1>follow us</h1>
-			<a href='https://www.instagram.com/whitmiresfurniture/' target='_blank'>
-				@whitmiresfurniture
+			<a
+				className='social__link'
+				href='https://www.instagram.com/whitmiresfurniture/'
+				target='_blank'
+			>
+				<FontAwesomeIcon
+					className='social__icon'
+					icon={['fab', 'instagram']}
+					size='2x'
+				/>
+				<span>@whitmiresfurniture</span>
 			</a>
 			{/* 4 col imgs */}
 			<div className='social__grid'>
