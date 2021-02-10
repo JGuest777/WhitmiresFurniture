@@ -5,8 +5,9 @@ import Hero from '../components/Hero'
 import Intro from '../components/Intro'
 import Social from '../components/Social'
 import Testimonials from '../components/Testimonials'
+import absoluteUrl from 'next-absolute-url'
 
-export default function Home() {
+export default function Home({ apiUrl }) {
 	return (
 		<div>
 			<Head>
@@ -18,7 +19,7 @@ export default function Home() {
 			<BannerImg />
 			<BannerBrands />
 			<Testimonials />
-			<Social />
+			<Social apiUrl={apiUrl} />
 		</div>
 	)
 }
@@ -27,7 +28,17 @@ export default function Home() {
 
 // 	return {
 // 		props: {
-// 			posts
+
 // 		}
 // 	}
 // }
+
+export async function getServerSideProps({ req }) {
+	const { protocol, host } = absoluteUrl(req)
+	const apiUrl = `${protocol}//${host}`
+	return {
+		props: {
+			apiUrl
+		}
+	}
+}
