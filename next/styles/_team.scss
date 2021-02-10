@@ -1,0 +1,33 @@
+.team {
+	text-align: center;
+	h1 {
+		margin: 4rem 0;
+		font-size: 72px;
+	}
+
+	img {
+		max-width: 298px;
+		max-height: 394px;
+	}
+
+	h4 {
+		font-size: 24px;
+	}
+
+	p {
+		max-width: 270px;
+		font-size: 16px;
+	}
+
+	&__grid {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__grid-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}

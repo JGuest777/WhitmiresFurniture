@@ -1,0 +1,22 @@
+.aboutHero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		margin: 4rem 0;
+		font-size: 72px;
+	}
+
+	img {
+		max-width: 1100px;
+		max-height: 590px;
+	}
+
+	p {
+		max-width: 1010px;
+		margin-top: 4rem;
+		text-align: center;
+		font-size: 24px;
+	}
+}

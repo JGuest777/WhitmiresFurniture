@@ -1,7 +1,11 @@
+import AboutHero from '../../components/AboutHero'
+import Team from '../../components/Team'
+
 export default function AboutPage() {
 	return (
-		<div style={{ textAlign: 'center' }}>
-			<h1>AboutPage</h1>
+		<div>
+			<AboutHero />
+			<Team />
 		</div>
 	)
 }
