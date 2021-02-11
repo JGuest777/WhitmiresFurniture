@@ -1,33 +1,29 @@
 .team {
 	text-align: center;
+	padding: 2rem 1.5rem;
 	h1 {
-		margin: 4rem 0;
-		font-size: 72px;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+		font-size: 3.5rem;
+	}
+
+	&__text {
+		h4 {
+			margin-top: 1rem;
+			font-size: $font-med;
+		}
+
+		p {
+			margin-top: 1rem;
+			max-width: 16.875rem;
+			font-size: $font-sm;
+		}
 	}
 
 	img {
-		max-width: 298px;
-		max-height: 394px;
-	}
-
-	h4 {
-		font-size: 24px;
-	}
-
-	p {
-		max-width: 270px;
-		font-size: 16px;
-	}
-
-	&__grid {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	&__grid-item {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		width: 18.75rem;
+		height: 394px;
+		object-fit: cover;
+		padding: 1rem;
 	}
 }

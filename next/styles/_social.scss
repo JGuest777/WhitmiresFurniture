@@ -1,5 +1,4 @@
 .social {
-	text-align: center;
 	background-color: #e5e5e5;
 	min-height: 50vh;
 	padding: 2rem;
@@ -12,21 +11,27 @@
 		font-size: 7.5rem;
 	}
 
-	a {
-		margin-top: 1.5rem;
+	&__link {
+		margin-top: 1rem;
 		margin-bottom: 2rem;
 		font-family: $altFont;
 		font-size: $font-lg;
-	}
-
-	&__link {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		a {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+			margin-top: 0.5rem;
+		}
 	}
 
 	&__grid {
+		text-align: center;
 		img {
 			width: 17.8rem;
 			height: 17.8rem;

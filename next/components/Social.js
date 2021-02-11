@@ -7,18 +7,16 @@ export default function Social({ apiUrl }) {
 	return (
 		<div className='social'>
 			<h1>follow us</h1>
-			<a
-				className='social__link'
-				href='https://www.instagram.com/whitmiresfurniture/'
-				target='_blank'
-			>
-				<FontAwesomeIcon
-					className='social__icon'
-					icon={['fab', 'instagram']}
-					size='2x'
-				/>
-				<span>@whitmiresfurniture</span>
-			</a>
+			<div className='social__link'>
+				<a href='https://www.instagram.com/whitmiresfurniture/' target='_blank'>
+					<FontAwesomeIcon
+						className='social__icon'
+						icon={['fab', 'instagram']}
+						size='2x'
+					/>
+					<p>@whitmiresfurniture</p>
+				</a>
+			</div>
 			{/* 4 col imgs */}
 			<div className='social__grid'>
 				{gramz.map((gram) => (

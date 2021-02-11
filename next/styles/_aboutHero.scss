@@ -3,20 +3,22 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 2rem 1.5rem;
 	h1 {
-		margin: 4rem 0;
-		font-size: 72px;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+		font-size: 3.5rem;
 	}
 
 	img {
-		max-width: 1100px;
-		max-height: 590px;
+		max-width: 100%;
 	}
 
 	p {
-		max-width: 1010px;
-		margin-top: 4rem;
+		max-width: 62.5rem;
 		text-align: center;
-		font-size: 24px;
+		margin-top: 2rem;
+		font-size: $font-lg;
+		line-height: 1.75rem;
 	}
 }
