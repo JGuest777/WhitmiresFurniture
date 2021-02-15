@@ -1,3 +1,9 @@
+<!-- TODO: Fix instagram post fetch -->
+<!-- TODO: Build Sanity schema for Furniture, sortable by Brands & Rooms -->
+<!-- TODO: Design Contact Page -->
+<!-- TODO: Add icons for contact info -->
+<!-- TODO: Incorporate correct media from Steven (Hero, BannerImg, Brand Logos?, Business photo, Staff Headshots & Bios) -->
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
