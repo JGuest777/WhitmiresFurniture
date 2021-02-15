@@ -72,6 +72,15 @@ button {
 }
 
 // Media @ 640px, 1024px, 1400px
+@media (max-width: 640px) {
+	.hero {
+		background-attachment: scroll !important;
+	}
+	.bannerImg {
+		background-attachment: scroll !important;
+	}
+}
+
 @media (max-width: 1024px) {
 	.header {
 		padding-left: 2rem !important;
